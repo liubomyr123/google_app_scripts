@@ -73,6 +73,11 @@ function useNormDist() {
     return;
   }
 
+  if (stdDevValue === 0) {
+    ui.alert(`The 'stdDev' value should be >0.`);
+    return;
+  }
+
   if (cumulativeValue === '') {
     ui.alert(`Please select not empty 'cumulative' value`);
     return;
